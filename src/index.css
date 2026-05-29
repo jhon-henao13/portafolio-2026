@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500&display=swap');
+@import 'aos/dist/aos.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #001E1A;
+  }
+  body {
+    background-color: transparent;
+    overflow-x: hidden;
+    font-family: 'Feather Bold', 'Segoe UI', system-ui, sans-serif;
+  }
+  /* Scrollbar personalizado */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #001311;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #10D589;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0a7049;
+  }
+}
+
+@layer components {
+  /* Botón Principal Estilo Cyber-Premium */
+  .btn-primary {
+    @apply relative px-8 py-3.5 font-bold text-[#001E1A] bg-[#10D589] rounded-xl
+           transition-all duration-300 overflow-hidden shadow-[0_0_20px_rgba(16,213,137,0.2)]
+           hover:bg-[#10D589] hover:shadow-[0_0_30px_rgba(16,213,137,0.6)] hover:scale-[1.03]
+           active:scale-[0.98] tracking-wide;
+  }
+  
+  /* Iconos Sociales Premium */
+  .social-icon {
+    @apply text-[#10D589] border border-[#10D589]/30 bg-[#001E1A]/40 backdrop-blur-md 
+           rounded-2xl w-14 h-14 flex items-center justify-center 
+           transition-all duration-300 hover:scale-110 hover:bg-[#10D589] hover:text-[#001E1A] 
+           hover:shadow-[0_0_20px_rgba(16,213,137,0.4)] hover:border-[#10D589];
+  }
+
+  .skills-title {
+    @apply relative text-center py-12 px-6 rounded-xl overflow-hidden bg-darkBg/80 z-10;
+  }
+  .skills-title::before {
+    content: '';
+    @apply absolute top-[-50%] left-[-50%] w-[200%] h-[200%] 
+           bg-gradient-to-br from-[#10D589] via-[#0f5c46] to-[#00665e] 
+           blur-[100px] opacity-50 animate-aurora;
+    z-index: 0;
+  }
+  .skills-title > * {
+    @apply relative z-10;
+  }
+  .glow-title {
+    @apply text-accent text-4xl md:text-5xl font-bold animate-glow;
+  }
+  .animated-line {
+    @apply h-0.5 bg-gradient-to-r from-transparent via-accent to-transparent w-32 mx-auto my-4 animate-line-glow;
+  }
+  .skill-card {
+    @apply flex flex-col items-center bg-white rounded-xl p-4 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl;
+    flex: 0 0 140px;
+  }
+  .project-card {
+    @apply bg-cardBg/80 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-accent/30 hover:-translate-y-1;
+  }
+}
+
+@layer utilities {
+  .animation-pause {
+    animation-play-state: paused;
+  }
+  @keyframes aurora {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .animate-aurora {
+    animation: aurora 10s ease infinite;
+    background-size: 600% 600%;
+  }
+  @keyframes glow {
+    from { text-shadow: 0 0 8px rgba(16,213,137,0.4), 0 0 14px rgba(16,213,137,0.2); }
+    to { text-shadow: 0 0 14px rgba(16,213,137,0.8), 0 0 30px rgba(16,213,137,0.4); }
+  }
+  .animate-glow {
+    animation: glow 2.5s ease-in-out infinite alternate;
+  }
+  @keyframes line-glow {
+    0% { background-position: -500px; }
+    100% { background-position: 500px; }
+  }
+  .animate-line-glow {
+    animation: line-glow 3s infinite linear;
+  }
+  @keyframes modalFade {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  .animate-modalFade {
+    animation: modalFade 0.4s ease;
+  }
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-scroll-skills {
+    animation: scroll 40s linear infinite;
+  }
+
+  /* Animación CSS para el efecto typing nativo */
+  .typing-text::before {
+    content: "Frontend Developer";
+    animation: words 12s infinite;
+    color: #10D589;
+  }
+  @keyframes words {
+    0%, 18% { content: "Full Stack AI Integrator"; }
+    20%, 38% { content: "AI Solutions Architect"; }
+    40%, 58% { content: "IoT Systems Developer"; }
+    60%, 78% { content: "Intelligent Automation Engineer"; }
+    80%, 100% { content: "Pentester"; }
+  }
+}
