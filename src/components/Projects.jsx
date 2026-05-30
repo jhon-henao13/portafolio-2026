@@ -183,73 +183,89 @@ const Projects = () => {
         </div>
 
         {/* Grid de Tarjetas de Proyectos */}
+        {/* Grid de Tarjetas de Proyectos */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectsData.map((project) => (
             <div
               key={project.id}
               onClick={() => openModal(project)}
-              className="group flex flex-col h-full bg-[#1e2023]/40 backdrop-blur-md border border-white/5 rounded-2xl overflow-hidden shadow-2xl hover:border-[#10D589]/30 hover:shadow-[0_0_30px_rgba(16,213,137,0.1)] transition-all duration-300 cursor-pointer"
+              className="group relative flex flex-col h-full bg-[#1e2023]/25 backdrop-blur-xl border border-white/[0.04] rounded-2xl overflow-hidden shadow-[0_24px_60px_-15px_rgba(0,0,0,0.8)] hover:border-[#10D589]/40 hover:shadow-[0_0_40px_rgba(16,213,137,0.12)] transition-all duration-500 cursor-pointer"
               data-aos="fade-up"
               data-aos-delay={project.aosDelay}
             >
-              {/* Contenedor de Imagen con Overlay */}
-              <div className="relative h-52 w-full overflow-hidden bg-[#001E1A]/60">
+              {/* Línea de iluminación sutil superior tipo Cyberpunk */}
+              <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-[#10D589]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              {/* Contenedor de Imagen con Escala Cinemática */}
+              <div className="relative h-52 w-full overflow-hidden bg-[#000a08]">
                 <img 
                   src={project.image} 
                   alt={project.title} 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 filter brightness-[0.9] group-hover:brightness-[1.05]" 
                 />
-                {/* Degradado para oscurecer el fondo inferior de la imagen */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#001E1A] via-transparent to-transparent opacity-60"></div>
                 
-                {/* Capa de acción hover */}
-                <div className="absolute inset-0 bg-[#001E1A]/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-xs">
-                  <span className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#10D589] text-[#001E1A] font-bold text-sm shadow-xl transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                    <FaEye className="text-base" /> Expandir Detalles
+                {/* Capas de Degradados de profundidad técnica */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#01110e] via-[#01110e]/40 to-transparent opacity-90"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#000a08]/50 to-transparent opacity-40"></div>
+                
+                {/* Indicador de Tipo de Proyecto - badge dinámico premium */}
+                <span className="absolute top-4 left-4 bg-black/50 backdrop-blur-md border border-white/10 text-white/60 font-mono text-[10px] px-2.5 py-1 rounded-full uppercase tracking-widest">
+                  {project.stack.includes("IoT") ? "⚡ IoT/Hardware" : project.stack.includes("Llama 3") || project.stack.includes("OpenAI") ? "🤖 AI Solution" : "🌐 Full-Stack"}
+                </span>
+
+                {/* Capa de acción hover refinada */}
+                <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-[2px]">
+                  <span className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#10D589] text-[#001E1A] font-extrabold text-sm shadow-[0_0_20px_rgba(16,213,137,0.4)] transform translate-y-3 group-hover:translate-y-0 transition-all duration-300 ease-out">
+                    <FaEye className="text-base" /> Inspeccionar Arquitectura
                   </span>
                 </div>
               </div>
 
-              {/* Contenido de la Tarjeta */}
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-white text-xl font-bold tracking-wide mb-2 line-clamp-1 group-hover:text-[#10D589] transition-colors duration-300">
+              {/* Contenido Técnico de la Tarjeta */}
+              <div className="p-6 flex flex-col flex-grow relative z-10">
+                <h3 className="text-white text-xl font-bold tracking-tight mb-2 line-clamp-1 group-hover:text-[#10D589] transition-colors duration-300">
                   {project.title}
                 </h3>
-                <p className="text-[#ccc] text-sm leading-relaxed mb-5 line-clamp-2 opacity-80">
+                <p className="text-[#ccc]/70 text-sm leading-relaxed mb-6 line-clamp-2 font-normal">
                   {project.description}
                 </p>
 
-                {/* Tags Tecnológicos */}
+                {/* Tags de Tecnologías Estilo Consola */}
                 <div className="flex flex-wrap gap-1.5 mb-6 mt-auto">
-                  {project.stack.split(",").map((tech, idx) => (
+                  {project.stack.split(",").slice(0, 4).map((tech, idx) => (
                     <span 
                       key={idx} 
-                      className="bg-white/5 border border-white/10 text-white/70 text-[11px] font-mono px-2.5 py-0.5 rounded-md tracking-tight"
+                      className="bg-white/[0.02] border border-white/5 text-white/50 text-[10px] font-mono px-2.5 py-1 rounded-md tracking-tight group-hover:border-[#10D589]/10 group-hover:text-white/70 transition-colors duration-300"
                     >
                       {tech.trim()}
                     </span>
                   ))}
+                  {project.stack.split(",").length > 4 && (
+                    <span className="text-white/30 text-[10px] font-mono px-1 py-1">
+                      +{project.stack.split(",").length - 4}
+                    </span>
+                  )}
                 </div>
 
-                {/* Enlaces de Acción Inferior */}
-                <div className="flex gap-3 pt-2 border-t border-white/5">
+                {/* Enlaces de Acción Inferiores */}
+                <div className="flex gap-3 pt-4 border-t border-white/[0.04]">
                   {project.github && project.github !== "#" ? (
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 inline-flex items-center justify-center gap-2 bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 text-white py-2.5 rounded-xl font-semibold text-sm transition-all duration-300"
+                      className="flex-1 inline-flex items-center justify-center gap-2 bg-white/[0.03] border border-white/10 hover:bg-white/[0.08] hover:border-white/20 text-white py-2.5 rounded-xl font-medium text-xs transition-all duration-300"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <FaGithub className="text-base" /> Code
+                      <FaGithub className="text-sm opacity-80" /> Source Code
                     </a>
                   ) : project.github === "#" ? (
                     <span
-                      className="flex-1 inline-flex items-center justify-center gap-2 bg-white/5 border border-white/5 text-white/30 py-2.5 rounded-xl font-semibold text-sm cursor-not-allowed"
+                      className="flex-1 inline-flex items-center justify-center gap-2 bg-white/[0.01] border border-white/[0.02] text-white/20 py-2.5 rounded-xl font-medium text-xs cursor-not-allowed select-none"
                       onClick={(e) => e.stopPropagation()}
                       title="Repositorio Privado"
                     >
-                      <FaGithub className="text-base opacity-40" /> Privado
+                      <FaGithub className="text-sm opacity-30" /> Enterprise Code
                     </span>
                   ) : null}
 
@@ -258,10 +274,10 @@ const Projects = () => {
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 inline-flex items-center justify-center gap-2 bg-[#10D589] hover:bg-[#10D589]/90 text-[#001E1A] py-2.5 rounded-xl font-bold text-sm shadow-md hover:shadow-[0_0_15px_rgba(16,213,137,0.3)] transition-all duration-300"
+                      className="flex-1 inline-flex items-center justify-center gap-2 bg-[#10D589] text-[#001E1A] hover:bg-[#15e695] py-2.5 rounded-xl font-bold text-xs shadow-md transition-all duration-300"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <FaExternalLinkAlt className="text-xs" /> Demo Live
+                      Live Deployment <FaExternalLinkAlt className="text-[10px]" />
                     </a>
                   )}
                 </div>
@@ -269,6 +285,7 @@ const Projects = () => {
             </div>
           ))}
         </div>
+        
       </div>
 
       {/* Modal Desplegable */}

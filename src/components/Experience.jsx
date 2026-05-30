@@ -9,7 +9,7 @@ const Experience = () => {
   }, []);
 
   return (
-    <section id="experiencia" className="container mx-auto px-6 py-24 max-w-6xl" data-aos="fade-up">
+    <section id="experiencia" className="container mx-auto px-6 py-16 max-w-6xl" data-aos="fade-up">
       
       {/* Encabezado de Sección */}
       <div className="text-center mb-16">

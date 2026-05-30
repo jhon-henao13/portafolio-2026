@@ -8,19 +8,38 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    background-color: #001E1A;
+    background-color: #000a08; 
   }
   body {
-    background-color: transparent;
+    background-color: #000a08;
     overflow-x: hidden;
     font-family: 'Feather Bold', 'Segoe UI', system-ui, sans-serif;
+    
+    /* UNIFICADO: Cuadrícula ultra-tenue integrada directamente */
+    background-image: 
+      linear-gradient(to right, rgba(16, 213, 137, 0.015) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(16, 213, 137, 0.015) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: center top;
   }
+  
+  /* Máscara de desvanecimiento optimizada para no tapar las partículas */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    /* Degradado premium: centro más claro, bordes oscuros viñeta */
+    background: radial-gradient(circle at 50% 40%, rgba(0, 10, 8, 0) 20%, #000a08 90%);
+    pointer-events: none;
+    z-index: 1; /* Lo subimos para que unifique el fondo, pero las partículas irán configuradas con lógica limpia */
+  }
+
   /* Scrollbar personalizado */
   ::-webkit-scrollbar {
     width: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: #001311;
+    background: #000a08;
   }
   ::-webkit-scrollbar-thumb {
     background: #10D589;

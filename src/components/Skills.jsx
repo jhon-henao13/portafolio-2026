@@ -85,7 +85,7 @@ const Skills = () => {
       </div>
 
       {/* Slider Infinito Premium */}
-      <div className="w-full overflow-hidden py-6 relative before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-20 sm:before:w-40 before:bg-gradient-to-r before:from-[#001E1A] before:to-transparent after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-20 sm:after:w-40 after:bg-gradient-to-l after:from-[#001E1A] after:to-transparent">
+      <div className="w-full overflow-hidden py-10 relative before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-20 sm:before:w-40 before:bg-gradient-to-r before:from-[#001E1A] before:to-transparent after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-20 sm:after:w-40 after:bg-gradient-to-l after:from-[#001E1A] after:to-transparent">
         <div className="flex gap-6 w-max animate-scroll-skills hover:animation-pause py-4">
           {displayItems.map((skill, idx) => (
             <div 
