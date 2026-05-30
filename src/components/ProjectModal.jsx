@@ -26,7 +26,7 @@ const ProjectModal = ({ isOpen, project, onClose }) => {
     >
       {/* Contenedor del Modal - Premium Terminal Framework Canvas */}
       <div 
-        className="relative bg-[#020e0c]/95 border border-white/10 rounded-2xl shadow-[0_0_80px_rgba(16,213,137,0.08)] max-w-6xl w-full mx-auto overflow-hidden animate-modalFade"
+        className="relative bg-[#020e0c]/95 border border-white/10 rounded-2xl shadow-[0_0_80px_rgba(16,213,137,0.08)] max-w-7xl w-full mx-auto overflow-hidden animate-modalFade"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Barra superior estilo Consola de Desarrollo */}
@@ -79,7 +79,7 @@ const ProjectModal = ({ isOpen, project, onClose }) => {
                 {project.title}
               </h2>
               
-              <p className="text-[#ccc]/80 text-sm sm:text-[15px] leading-relaxed mb-6 font-normal">
+              <p className="text-[#ccc]/80 text-sm sm:text-[17px] leading-relaxed mb-6 font-normal">
                 {project.fullDesc}
               </p>
               

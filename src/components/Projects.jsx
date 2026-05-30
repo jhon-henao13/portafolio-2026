@@ -6,10 +6,10 @@ import { FaGithub, FaExternalLinkAlt, FaEye, FaLaptopCode } from "react-icons/fa
 const projectsData = [
   {
     id: 1,
-    title: "WeProm MX | Marketing y Publicidad Digital",
-    description: "Marketing Digital Estratégico. Desarrollo de alta fidelidad basado en Figma.",
-    fullDesc: "Ecosistema digital principal para marketing y publicidad estratégica. Diseño complejo basado en Figma con alta fidelidad y animaciones fluidas.",
-    stack: "React.js, Tailwind CSS, Framer Motion, Figma UI/UX, Vercel, npm",
+    title: "WeProm MX | Sede LATAM",
+    description: "Plataforma corporativa de alta fidelidad UI/UX para una de las agencias de marketing líderes en México. Desarrollo Pixel-Perfect basado en físicas y animaciones complejas.",
+    fullDesc: "Ecosistema web corporativo premium de 9 secciones especializado para WeProm LATAM. Desarrollo Pixel-Perfect que traduce diseños complejos de Figma en código interactivo de alto rendimiento. Implementa animaciones avanzadas y micro-interacciones basadas en cálculos matemáticos y físicas fluidas, logrando una experiencia inmersiva sin sacrificar la optimización SEO ni los tiempos de carga.",
+    stack: "React.js, Tailwind CSS, Framer Motion, Figma UI/UX, Vercel, Vite, Canva Design, npm",
     image: "/images/hero-wepromx.png",
     github: null,
     demo: "https://weprom-ventura-figma-dising.vercel.app",
@@ -17,10 +17,10 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "WeProm | División de Artículos Promocionales",
-    description: "E-commerce & Dashboard Administrativo. Gestión internacional de artículos promocionales.",
-    fullDesc: "Plataforma profesional con Dashboard administrativo para la gestión de artículos promocionales en México. Incluye panel de control moderno y transiciones premium.",
-    stack: "React.js, Tailwind CSS, Node.js, Supabase, Vercel",
+    title: "WeProm | Artículos Promocionales",
+    description: "E-commerce corporativo y CMS administrativo a medida. Arquitectura Full-Stack con control de inventario y transiciones premium.",
+    fullDesc: "Plataforma web comercial y administrativa para la división internacional de artículos promocionales de WeProm LATAM. Integra una landing page interactiva de alta conversión con un Dashboard Administrativo privado (CRUD) para la gestión autónoma de catálogos y proyectos. Incluye formularios de contacto con validación en tiempo real, transiciones de estado fluidas y persistencia de datos segura mediante una arquitectura en la nube.",
+    stack: "React.js, Tailwind CSS, Node.js, Supabase, Vercel, Canva Design, Vite, npm",
     image: "/images/hero-promocionales.png",
     github: null,
     demo: "https://promocionales.weprom.mx/",
@@ -28,10 +28,10 @@ const projectsData = [
   },
   {
     id: 3,
-    title: "WeProm Europe",
-    description: "Corporate Site & CMS Autogestionable para el mercado en París.",
-    fullDesc: "Sitio institucional para el mercado europeo (París). Blog autogestionable con Sanity Studio, arquitectura elegante y optimización de hosting en WPX.",
-    stack: "React.js, Tailwind, Sanity CMS, WPX Net, Canva Design",
+    title: "WeProm Europe | París",
+    description: "Corporate Hub internacional y CMS autogestionable para el corredor comercial Europa-América Latina. Optimización de infraestructura empresarial.",
+    fullDesc: "Sitio institucional premium desarrollado para la sede europea en París de un grupo con más de 35 años de trayectoria intercontinental. El proyecto unifica el diseño corporativo de Canva con un sistema de gestión de contenidos (CMS) headless mediante Sanity Studio, permitiendo la publicación dinámica de insights globales. Cuenta con una arquitectura de red optimizada específicamente para servidores WPX, garantizando máxima disponibilidad y velocidad en mercados internacionales.",
+    stack: "React.js, Tailwind, Sanity CMS, WPX Net, Canva Design, Vite, npm",
     image: "/images/hero-wepromeurope.png",
     github: null,
     demo: "https://wepromeurope.com/",
@@ -40,8 +40,8 @@ const projectsData = [
   {
     id: 4,
     title: "Ambiqua Landing",
-    description: "Landing page moderna y responsive para Ambiqua, solución de riego inteligente.",
-    fullDesc: "Landing page moderna y responsive para Ambiqua, solución de riego inteligente. Desarrollada con HTML, CSS y JS, enfocada en accesibilidad y UX.",
+    description: "Landing page corporativa de alta conversión para tecnología agrotech. Enfoque estricto en UX/UI interactivo y accesibilidad.",
+    fullDesc: "Interfaz web de presentación para Ambiqua, una solución de ingeniería enfocada en el riego inteligente. Desarrollada bajo metodologías ágiles utilizando estándares modernos de diseño web nativo, priorizando la accesibilidad universal, semántica HTML5 limpia y una experiencia de usuario (UX) fluida y adaptativa en cualquier resolución de pantalla móvil o de escritorio.",
     stack: "HTML, CSS, JavaScript, Responsive, Vercel",
     image: "/images/hero-ambiqua.png",
     github: "https://github.com/jhon-henao13/Ambiqua-Landing",
@@ -51,8 +51,8 @@ const projectsData = [
   {
     id: 5,
     title: "Ambiqua App IoT",
-    description: "Aplicación web progresiva Full-Stack para monitorear y gestionar cultivos en tiempo real.",
-    fullDesc: "Aplicación web progresiva Full-Stack para monitorear y gestionar cultivos en tiempo real. Integra sensores IoT (ESP32), gráficas con Chart.js, dashboard administrativo y control de riego vía MQTT.",
+    description: "Ecosistema Full-Stack IoT para telemetría agrícola. Telecontrol de hardware y procesamiento de datos en tiempo real.",
+    fullDesc: "Aplicación Web Progresiva (PWA) de nivel industrial para el monitoreo y automatización de cultivos a gran escala. Conecta hardware embebido (ESP32) mediante el protocolo de mensajería liviana MQTT para la activación de actuadores hidráulicos en tiempo real. Dispone de un panel analítico interactivo que procesa flujos de datos asíncronos y los renderiza en gráficas reactivas del lado del cliente.",
     stack: "Flask, Python, MySQL, Chart.js, MQTT, PWA",
     image: "/images/hero-ambiqua-app.png",
     github: "https://github.com/jhon-henao13/Ambiqua",
@@ -62,19 +62,44 @@ const projectsData = [
   {
     id: 6,
     title: "Grupo Élite SaaS (AI EdTech)",
-    description: "Plataforma SaaS avanzada para preparación ICFES con Mentor IA (Llama 3).",
-    fullDesc: "Plataforma SaaS avanzada para la preparación de pruebas de estado de Colombia (ICFES). Integra un Mentor IA (Llama 3) para análisis de métricas, estrategias de estudio personalizadas y simulacros interactivos con retroalimentación en tiempo real.",
-    stack: "Python / Flask, MySQL, Llama 3 (Groq), Chart.js, Tailwind CSS, PWA",
+    description: "Plataforma de software educativo integrado con Modelos de Lenguaje Avanzados (LLM) para analítica de aprendizaje personalizado.",
+    fullDesc: "SaaS arquitectónicamente diseñado para la optimización académica en pruebas de estado nacionales (ICFES). Implementa un motor de Inteligencia Artificial mediante Llama 3 (Groq API) configurado como un mentor cognitivo personalizado. La plataforma procesa estadísticas de simulacros masivos, predice áreas de mejora mediante algoritmos de ciencia de datos y genera planes de contingencia interactivos con retroalimentación inmediata.",
+    stack: "Python, Flask, MySQL, Llama 3 (Groq), Chart.js, Tailwind, PWA",
     image: "/images/mockup-dashboard2.webp",
     github: "#",
     demo: "https://grupoelite.pythonanywhere.com",
     aosDelay: 200,
   },
+
   {
     id: 7,
-    title: "Syslity",
-    description: "Landing page corporativa para soporte técnico y venta de equipos.",
-    fullDesc: "Landing page corporativa para empresa de soporte técnico, mantenimiento y comercialización de equipos de cómputo. Diseño enfocado en claridad, confianza y estructura profesional.",
+    title: "Clipzy Media PWA",
+    description: "Aplicación Web Progresiva multimedia de alta velocidad orientada al procesamiento en la nube y descargas asíncronas.",
+    fullDesc: "Herramienta de software en la nube optimizada como PWA (Progressive Web App) para la extracción y transcodificación de archivos multimedia en alta definición de forma concurrente. Diseñada con una interfaz minimalista hiperrápida, consume procesos de servidor asíncronos para entregar descargas procesadas sin pérdida de calidad y con nula latencia para el usuario.",
+    stack: "Flask, Python, yt-dlp, Tailwind, PWA, Koyeb",
+    image: "/images/hero-clipzy.png",
+    github: "https://github.com/jhon-henao13/Clipzy",
+    demo: "https://clipzy.koyeb.app",
+    aosDelay: 100,
+  },
+
+  {
+    id: 8,
+    title: "Socialize Network",
+    description: "Plataforma social monolítica con mensajería privada, control de sesiones seguro y sistemas de interacción asíncrona.",
+    fullDesc: "Aplicación web social que implementa los fundamentos de ingeniería de software para plataformas comunitarias. Cuenta con pasarelas de autenticación cifrada, control de perfiles dinámicos, hilos de discusión interactivos, algoritmos para contadores de interacciones (likes/comentarios) y un núcleo de mensajería privada entre usuarios, todo construido bajo una arquitectura relacional limpia.",
+    stack: "PHP, MySQL, HTML, CSS, JS, Bootstrap, XAMPP",
+    image: "/images/hero-socialize.jpeg",
+    github: "https://github.com/jhon-henao13/Socialize",
+    demo: null,
+    aosDelay: 400,
+  },
+
+  {
+    id: 9,
+    title: "Syslity Tech",
+    description: "Landing page empresarial de servicios TI. Diseño enfocado en la conversión corporativa y la confianza de marca.",
+    fullDesc: "Portal corporativo diseñado para una firma especializada en soporte de infraestructura, mantenimiento preventivo y distribución tecnológica. La interfaz equilibra la solidez institucional con elementos dinámicos interactivos de partículas fluidas, estructurando los servicios TI en un embudo visual claro que impulsa la captación de clientes potenciales B2B.",
     stack: "HTML, CSS, JS, tsParticles.js, AOS.js, Vercel, Font Awesome",
     image: "/images/hero-syslity.png",
     github: "https://github.com/jhon-henao13/Syslity-Landing",
@@ -82,32 +107,22 @@ const projectsData = [
     aosDelay: 200,
   },
   {
-    id: 8,
-    title: "Pionix",
-    description: "Landing page institucional para gestión de eventos y servicios técnicos.",
-    fullDesc: "Landing page institucional para empresa de gestión de eventos y servicios técnicos. Unifica dos líneas de negocio en una presentación visual coherente, moderna y adaptable.",
+    id: 10,
+    title: "Pionix Events",
+    description: "Plataforma institucional híbrida con segmentación visual avanzada de modelos de negocio cruzados.",
+    fullDesc: "Desarrollo web corporativo para una empresa líder en gestión de eventos masivos y soporte de ingeniería técnica. El reto técnico consistió en unificar dos unidades de negocio de naturalezas distintas bajo una misma identidad visual coherente y unificada, utilizando layouts asimétricos, optimización de recursos estáticos y animaciones controladas al hacer scroll.",
     stack: "HTML, CSS, JS, tsParticles.js, AOS.js, Vercel, Font Awesome",
     image: "/images/hero-pionix.jpg",
     github: "https://github.com/jhon-henao13/Pionix",
     demo: "https://jhon-henao13.github.io/Pionix-Landing",
     aosDelay: 300,
   },
+  
   {
-    id: 9,
-    title: "Socialize",
-    description: "Red social con registro, publicaciones, likes, comentarios, seguidores y mensajería.",
-    fullDesc: "Red social desarrollada con PHP y MySQL que permite registro de usuarios, creación de perfiles, publicaciones, likes, comentarios, sistema de seguidores y mensajería privada. Implementa seguridad básica, diseño responsive y subida de imágenes.",
-    stack: "PHP, MySQL, HTML, CSS, JS, Bootstrap, XAMPP",
-    image: "/images/hero-socialize.jpeg",
-    github: "https://github.com/jhon-henao13/Socialize",
-    demo: null,
-    aosDelay: 400,
-  },
-  {
-    id: 10,
-    title: "Socialis",
-    description: "Plataforma de foros y comunidad online con autenticación y blogs.",
-    fullDesc: "Plataforma de foros y comunidad online con sistema de autenticación, publicaciones tipo blog, categorías, comentarios y perfiles de usuario. Construida con Flask, MySQL, HTML, CSS y JavaScript.",
+    id: 11,
+    title: "Socialis Forums",
+    description: "Comunidad y foro de discusión digital de alto rendimiento con taxonomías dinámicas y login seguro.",
+    fullDesc: "Plataforma Web Full-Stack concebida para la creación y debate de blogs técnicos y comunidades online. Estructurada mediante un backend robusto que administra sesiones de usuario, gestiona de forma segura el almacenamiento en bases de datos relacionales, y despliega foros clasificados por categorías jerárquicas con capacidades de moderación y feed personalizado.",
     stack: "Flask, Python, MySQL, HTML, CSS, JavaScript, Auth Login",
     image: "/images/hero-socialis.png",
     github: "https://github.com/jhon-henao13/Foro_Socialis_2",
@@ -115,32 +130,23 @@ const projectsData = [
     aosDelay: 300,
   },
   {
-    id: 11,
-    title: "Vitalis",
-    description: "Plataforma de telemedicina y monitoreo de salud con gráficas y alertas.",
-    fullDesc: "Plataforma de telemedicina y monitoreo de salud con panel de usuario para registro de métricas, alertas personalizadas y gráficas profesionales con Chart.js. Incluye login seguro, formularios inteligentes y dashboard médico-paciente.",
+    id: 12,
+    title: "Vitalis Telemedicina",
+    description: "Plataforma de e-Health para el monitoreo clínico remoto. Dashboards reactivos con analítica de constantes vitales.",
+    fullDesc: "Software de salud digital (Telemedicina) enfocado en la comunicación médico-paciente y el seguimiento preventivo. Dispone de un panel clínico inteligente donde el usuario registra métricas corporales, las cuales se analizan en tiempo real mediante un motor gráfico interactivo que genera alertas automáticas ante anomalías críticas, priorizando la privacidad y la experiencia UX intuitiva.",
     stack: "Flask, Python, MySQL, Chart.js, HTML, CSS, JS",
     image: "/images/hero-vitalis.png",
     github: "https://github.com/jhon-henao13/vitalis",
     demo: "https://estiguar16.pythonanywhere.com",
     aosDelay: 400,
   },
-  {
-    id: 12,
-    title: "Clipzy",
-    description: "Aplicación PWA para descargar videos y audio de múltiples plataformas.",
-    fullDesc: "Aplicación web progresiva (PWA) para descargar videos y audio de múltiples plataformas utilizando yt-dlp. Permite descargas con solo un enlace, sin marca de agua y en la máxima calidad disponible.",
-    stack: "Flask, Python, yt-dlp, Tailwind, PWA, Koyeb",
-    image: "/images/hero-clipzy.png",
-    github: "https://github.com/jhon-henao13/Clipzy",
-    demo: "https://clipzy.koyeb.app",
-    aosDelay: 100,
-  },
+
+
   {
     id: 13,
-    title: "Chatbot Política",
-    description: "Chatbot conversacional con OpenAI para análisis político.",
-    fullDesc: "Chatbot conversacional especializado en análisis político, integrando la API de OpenAI para generar respuestas contextualizadas. Incluye interfaz simple, manejo de sesiones y moderación básica de contenido.",
+    title: "AI Politics Chatbot",
+    description: "Asistente cognitivo inteligente entrenado para el procesamiento de lenguaje natural y análisis político de datos contextuales.",
+    fullDesc: "Agente conversacional especializado desarrollado para la interpretación contextualizada de datos analíticos del entorno político. Integra APIs avanzadas de OpenAI configuradas mediante ingeniería de prompts específica para evitar alucinaciones, mitigando riesgos informativos mediante capas de moderación automatizada y control de estados persistentes durante la sesión.",
     stack: "Python, OpenAI API, Flask, Frontend",
     image: "/images/vector.png",
     github: "https://github.com/jhon-henao13/chatbot-politica",
@@ -184,7 +190,7 @@ const Projects = () => {
 
         {/* Grid de Tarjetas de Proyectos */}
         {/* Grid de Tarjetas de Proyectos */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8">
           {projectsData.map((project) => (
             <div
               key={project.id}
@@ -197,7 +203,7 @@ const Projects = () => {
               <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-[#10D589]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
               {/* Contenedor de Imagen con Escala Cinemática */}
-              <div className="relative h-52 w-full overflow-hidden bg-[#000a08]">
+              <div className="relative h-54 w-full overflow-hidden bg-[#000a08]">
                 <img 
                   src={project.image} 
                   alt={project.title} 
