@@ -8,10 +8,10 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    background-color: #000a08; 
+    background-color: #031411; 
   }
   body {
-    background-color: #000a08;
+    background-color: #031411;
     overflow-x: hidden;
     font-family: 'Feather Bold', 'Segoe UI', system-ui, sans-serif;
     
@@ -24,12 +24,13 @@
   }
   
   /* Máscara de desvanecimiento optimizada para no tapar las partículas */
+  /* Máscara de desvanecimiento optimizada para no tapar las partículas */
   body::before {
     content: '';
     position: fixed;
     inset: 0;
     /* Degradado premium: centro más claro, bordes oscuros viñeta */
-    background: radial-gradient(circle at 50% 40%, rgba(0, 10, 8, 0) 20%, #000a08 90%);
+    background: radial-gradient(circle at 50% 40%, rgba(3, 20, 17, 0) 30%, #031411 95%);
     pointer-events: none;
     z-index: 1; /* Lo subimos para que unifique el fondo, pero las partículas irán configuradas con lógica limpia */
   }
@@ -39,7 +40,7 @@
     width: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: #000a08;
+    background: #031411;
   }
   ::-webkit-scrollbar-thumb {
     background: #10D589;
