@@ -122,22 +122,22 @@ const ProjectDetail = () => {
             <div className="lg:col-span-2 space-y-8">
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
                 <h3 className="text-xl font-bold text-white mb-3">Descripción</h3>
-                <p className="text-textLight leading-relaxed">{detailedDescription}</p>
+                <p className="text-textLight text-xl leading-[2]">{detailedDescription}</p>
               </div>
 
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
                 <h3 className="text-xl font-bold text-white mb-3">Desafío Técnico</h3>
-                <p className="text-textLight leading-relaxed">{challenge}</p>
+                <p className="text-textLight text-xl leading-[2]">{challenge}</p>
               </div>
 
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
                 <h3 className="text-xl font-bold text-white mb-3">Solución Implementada</h3>
-                <p className="text-textLight leading-relaxed">{solution}</p>
+                <p className="text-textLight text-xl leading-[2]">{solution}</p>
               </div>
 
               <div className="rounded-2xl p-6 border" style={{ backgroundColor: `${palette.primary}15`, borderColor: `${palette.primary}30` }}>
                 <h3 className="text-xl font-bold mb-3" style={{ color: palette.primary }}>📈 Resultados</h3>
-                <p className="text-textLight leading-relaxed">{results}</p>
+                <p className="text-textLight text-xl leading-[2]">{results}</p>
               </div>
             </div>
 

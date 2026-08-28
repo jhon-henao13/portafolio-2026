@@ -160,9 +160,34 @@ export const projectsData = [
       aosDelay: 100,
     },
 
+    {
+      id: 8,
+      slug: "ortopedia-justo-sierra",
+      title: "Ortopedia Justo Sierra | Unidad de Especialidades Ortopédicas",
+      description: "Landing page institucional para una unidad de especialidades ortopédicas y traumatológicas. Diseño moderno, profesional y altamente premium que transmite confianza y excelencia médica.",
+      detailedDescription: "Plataforma digital para la Unidad de Especialidades Ortopédicas y Traumatológicas Justo Sierra, con sede en Guadalajara, Jalisco. El sitio web presenta un equipo de cirujanos subespecialistas, certificaciones de excelencia, convenios con aseguradoras y un catálogo de soluciones quirúrgicas de alta especialidad. El diseño combina una paleta de colores limpia y profesional (blanco, azul oscuro, grises y acentos vibrantes) con una experiencia de usuario fluida, generando confianza y credibilidad en el paciente.",
+      challenge: "El principal desafío fue traducir la autoridad y experiencia médica de un grupo de cirujanos ortopédicos en una experiencia digital que transmitiera confianza, seguridad y cercanía. La landing page debía comunicar credibilidad institucional (certificaciones, años de experiencia, número de procedimientos) a la vez que guiaba al usuario potencial hacia la acción de agendar una cita de forma clara y sencilla, manteniendo un diseño sobrio pero elegante.",
+      solution: "Se optó por una arquitectura frontend con React y Tailwind CSS, priorizando una jerarquía visual impecable y una navegación intuitiva. La estructura se organizó en secciones modulares: hero con propuesta de valor, especialidades quirúrgicas, equipo médico, testimonios, certificaciones y contacto. Se utilizó una paleta de colores neutral y profesional (blanco, azules y grises) para reforzar la identidad institucional, con acentos que destacan las llamadas a la acción y generan un contraste visual elegante.",
+      results: "La landing page ha mejorado la captación de pacientes para la unidad, facilitando la agenda de citas a través de WhatsApp y generando confianza mediante la presentación del equipo médico y los casos de éxito. Los médicos han destacado la claridad de la información y el diseño profesional, lo que ha incrementado las consultas y la percepción de calidad del servicio.",
+      stack: ["React.js", "Tailwind CSS", "Vite", "Responsive Design", "Framer Motion"],
+      image: "/images/hero-ortopedia-justo-sierra.png",
+      gallery: [],
+      github: null,
+      demo: "https://ortopediajustosierra.mx/",
+      aosDelay: 100,
+      colorPalette: {
+        primary: "#f9f9f9",    // Azul oscuro institucional
+        secondary: "#3b82f6",  // Azul vibrante (acento)
+        accent: "#3b82f6",     // Mismo acento para botones
+        dark: "#001529",       // Azul muy oscuro (fondo)
+        light: "#e2e8f0",      // Gris claro
+        white: "#ffffff",      // Blanco
+      }
+    },
+
   
   {
-    id: 8,
+    id: 9,
     slug: "ambiqua-landing",
     title: "Ambiqua Landing",
     description: "Landing page corporativa de alta conversión para tecnología agrotech. Enfoque estricto en UX/UI interactivo y accesibilidad.",
@@ -178,7 +203,7 @@ export const projectsData = [
     aosDelay: 100,
   },
   {
-    id: 9,
+    id: 10,
     slug: "ambiqua-app-iot",
     title: "Ambiqua App IoT",
     description: "Ecosistema Full-Stack IoT para telemetría agrícola. Telecontrol de hardware y procesamiento de datos en tiempo real.",
@@ -194,7 +219,7 @@ export const projectsData = [
     aosDelay: 100,
   },
   {
-    id: 10,
+    id: 11,
     slug: "grupo-elite-saas",
     title: "Grupo Élite SaaS (AI EdTech)",
     description: "Plataforma de software educativo integrado con Modelos de Lenguaje Avanzados (LLM) para analítica de aprendizaje personalizado.",
@@ -210,7 +235,7 @@ export const projectsData = [
     aosDelay: 200,
   },
   {
-    id: 11,
+    id: 12,
     slug: "clipzy-media-pwa",
     title: "Clipzy Media PWA",
     description: "Aplicación Web Progresiva multimedia de alta velocidad orientada al procesamiento en la nube y descargas asíncronas.",
@@ -226,11 +251,9 @@ export const projectsData = [
     aosDelay: 100,
   },
 
- 
-
 
   {
-    id: 12,
+    id: 13,
     slug: "socialize-network",
     title: "Socialize Network",
     description: "Plataforma social monolítica con mensajería privada, control de sesiones seguro y sistemas de interacción asíncrona.",
