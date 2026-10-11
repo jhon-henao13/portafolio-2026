@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { FaBars, FaTimes, FaHome, FaUser, FaBriefcase, FaCode } from "react-icons/fa";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   // Detectar scroll para cambiar el diseño del Navbar a flotante fijo
   useEffect(() => {
@@ -33,6 +36,22 @@ const Navbar = () => {
     { name: "Proyectos", href: "#proyectos", icon: FaCode },
   ];
 
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    setMenuOpen(false);
+
+    if (location.pathname !== "/") {
+      // Si estamos en una subruta (ej. /projects/slug), navegamos a la raíz con el hash
+      navigate(`/${href}`);
+    } else {
+      // Si ya estamos en el inicio, hacemos scroll suave directamente
+      const targetElement = document.querySelector(href);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <nav 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
@@ -43,7 +62,10 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo de Marca */}
-        <div className="text-white text-2xl font-bold tracking-tight select-none cursor-pointer group">
+        <div 
+          onClick={(e) => handleNavClick(e, "#inicio")}
+          className="text-white text-2xl font-bold tracking-tight select-none cursor-pointer group"
+        >
           estiguar
           <span className="text-[#10D589] inline-block transition-transform duration-300 group-hover:translate-x-1">
             .dev
@@ -62,17 +84,17 @@ const Navbar = () => {
         {/* Menú de Enlaces (Desktop & Mobile) */}
         <div
           className={`fixed inset-0 h-screen w-full bg-[#001E1A]/98 backdrop-blur-xl md:backdrop-blur-none md:bg-transparent md:static md:h-auto md:w-auto 
-                      flex flex-col md:flex-row items-center justify-center 
-                      transition-all duration-300 ease-in-out z-40
-                      ${menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto"}`}
+                    flex flex-col md:flex-row items-center justify-center 
+                    transition-all duration-300 ease-in-out z-40
+                    ${menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto"}`}
         >
           <ul className="flex flex-col md:flex-row items-center gap-8 md:gap-10 text-white text-xl md:text-base font-semibold tracking-wide">
             {navLinks.map((link) => (
               <li key={link.name} className="relative overflow-hidden py-1">
                 <a
                   href={link.href}
-                  onClick={() => setMenuOpen(false)}
-                  className="flex items-center gap-2.5 opacity-80 hover:opacity-100 text-white hover:text-[#10D589] transition-all duration-300 relative group"
+                  onClick={(e) => handleNavClick(e, link.href)}
+                  className="flex items-center gap-2.5 opacity-80 hover:opacity-100 text-white hover:text-[#10D589] transition-all duration-300 relative group cursor-pointer"
                 >
                   <link.icon className="text-[#10D589]/70 group-hover:text-[#10D589] transition-colors" />
                   <span>{link.name}</span>
