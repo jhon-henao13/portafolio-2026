@@ -9,7 +9,10 @@ export default defineConfig({
     react(),
     createVitePlugin({
       routes: ['/', ...projectsData.map(p => `/projects/${p.slug}`)],
-      concurrency: 5, // Renderiza 5 páginas en paralelo
+      concurrency: 5,
+      delay: 2000, // Espera 2 segundos después de la carga para que Helmet actualice el <head>
+      waitUntil: 'networkidle0', // Espera a que no haya conexiones de red activas
+      waitForSelector: 'h1', // Espera a que el <h1> del proyecto aparezca en el DOM
     }),
   ],
 });
