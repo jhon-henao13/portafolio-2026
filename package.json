@@ -5,10 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node src/sitemapGenerator.js && vite build",
+    "postinstall": "puppeteer install",
+    "build": "node src/sitemapGenerator.js && vite build && node scripts/fix-seo.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  
   "dependencies": {
     "aos": "^2.3.4",
     "react": "^19.2.6",
