@@ -3,7 +3,7 @@ import { writeFileSync } from 'fs';
 import { resolve } from 'path';
 import { projectsData } from './data/projectsData.js';
 
-const hostname = 'https://estiguar.vercel.app';
+const hostname = 'https://estiguar.dev';
 const routes = ['/', ...projectsData.map(p => `/projects/${p.slug}`)];
 
 // Agrega este log para verificar

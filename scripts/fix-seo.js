@@ -5,7 +5,7 @@ import { projectsData } from '../src/data/projectsData.js';
 
 console.log('\n🔧 Inyectando SEO definitivo en los HTML pre-renderizados...');
 
-const hostname = 'https://estiguar.vercel.app';
+const hostname = 'https://estiguar.dev';
 
 projectsData.forEach(project => {
   const filePath = resolve(process.cwd(), `dist/projects/${project.slug}/index.html`);

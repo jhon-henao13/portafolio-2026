@@ -53,9 +53,9 @@ const ProjectDetail = () => {
         <meta name="description" content={detailedDescription.slice(0, 160)} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={detailedDescription.slice(0, 160)} />
-        <meta property="og:image" content={`https://estiguar.vercel.app${image}`} />
-        <meta property="og:url" content={`https://estiguar.vercel.app/projects/${slug}`} />
-        <link rel="canonical" href={`https://estiguar.vercel.app/projects/${slug}`} />
+        <meta property="og:image" content={`https://estiguar.dev${image}`} />
+        <meta property="og:url" content={`https://estiguar.dev/projects/${slug}`} />
+        <link rel="canonical" href={`https://estiguar.dev/projects/${slug}`} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -66,8 +66,8 @@ const ProjectDetail = () => {
               "@type": "Person",
               "name": "Jhon Estiguar Henao"
             },
-            "url": `https://estiguar.vercel.app/projects/${slug}`,
-            "image": `https://estiguar.vercel.app${image}`
+            "url": `https://estiguar.dev/projects/${slug}`,
+            "image": `https://estiguar.dev${image}`
           })}
         </script>
       </Helmet>

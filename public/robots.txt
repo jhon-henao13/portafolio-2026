@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Indica la ubicación del mapa del sitio
-Sitemap: https://estiguar.vercel.app/sitemap.xml
+Sitemap: https://estiguar.dev/sitemap.xml
