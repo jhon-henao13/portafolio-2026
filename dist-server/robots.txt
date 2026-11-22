@@ -1,0 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Indica la ubicación del mapa del sitio
+Sitemap: https://estiguar.dev/sitemap.xml

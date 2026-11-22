@@ -4,4 +4,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  ssr: {
+    noExternal: true, // Incluye TODAS las dependencias en el bundle SSR
+  },
 });
