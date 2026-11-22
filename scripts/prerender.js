@@ -1,7 +1,7 @@
 // scripts/prerender.js
 import fs from 'fs';
 import path from 'path';
-import { render } from '../src/entry-server.jsx'; // Asegúrate de que Vite pueda procesar JSX; si no, usa .js
+import { render } from '../src/entry-server.js'; // Asegúrate de que Vite pueda procesar JSX; si no, usa .js
 import { projectsData } from '../src/data/projectsData.js';
 
 const routes = [
